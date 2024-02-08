@@ -22,7 +22,10 @@ export default function ProductCard({ title, description, price, firstImageUrl, 
   };
 
   return (
-    <Card sx={{ maxWidth: 345 ,height:400 }}>
+    <Card sx={{ maxWidth: 345 ,height:400 }} 
+    onMouseEnter={handleImageHover} 
+    onMouseLeave={handleImageLeave} 
+    >
         <Box position='relative'> 
         <IconButton aria-label="add to favorites" sx={{
             position: 'absolute',
@@ -48,9 +51,8 @@ export default function ProductCard({ title, description, price, firstImageUrl, 
         height="194"
          image={hovered ? secondImageUrl : firstImageUrl} 
         alt="Dog Photo"
-        onMouseEnter={handleImageHover} 
-        onMouseLeave={handleImageLeave} 
-        style={{ cursor: 'pointer' ,height: 200, width: 200, margin: 'auto'}}
+      
+        style={{ cursor: 'pointer' ,height: 200, width: 200, margin: 'auto' }}
       />
        </Box>
       <CardContent>
