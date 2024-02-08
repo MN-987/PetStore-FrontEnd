@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { Box, Typography } from '@mui/material';
 
 
-const CategorieCard = () => {
+const CategorieCard = ({title,imageUrl,description}) => {
     return (
         <div>
           <Box>
@@ -28,7 +29,7 @@ const CategorieCard = () => {
             color: '#fc4d7d',
             transition: 'transform 0.3s' 
         }}>
-            <img src='https://bzpets.myshopify.com/cdn/shop/files/cat-1.jpg?v=1672719548&width=400' alt='dog' style={{width: '100px', height: '100px' , borderRadius:50}} />
+            <img src={imageUrl} alt='dog' style={{width: '100px', height: '100px' , borderRadius:50}} />
         </Typography>
 
         
@@ -42,8 +43,14 @@ const CategorieCard = () => {
     },
     marginLeft: '50px',
 }}>
-        Dog Food
+        {title}
+        <Typography variant='h6' sx={{fontSize:'15px' , color:'#7c7c7c'} }>
+        {description}
     </Typography>
+
+    </Typography>
+   
+
 </Box>
 
 

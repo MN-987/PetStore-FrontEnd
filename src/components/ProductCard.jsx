@@ -11,6 +11,7 @@ import { Box } from '@mui/material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import StarIcon from '@mui/icons-material/Star';
 
+// eslint-disable-next-line react/prop-types
 export default function ProductCard({ title, description, price, firstImageUrl, secondImageUrl }) {
   const [hovered, setHovered] = React.useState(false);
   const handleImageHover = () => {

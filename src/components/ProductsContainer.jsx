@@ -7,7 +7,7 @@ return (
 
 <Container>
       {/* Title for the page */}
-      <Typography variant="h4" style={{ color: '#2c3454', marginBottom: '20px' }}>
+      <Typography variant="h4"  style={{ color: "#2c3454", marginBottom: "20px" , textAlign:'center',fontWeight:'400' , fontFamily:'cursive' , marginTop:'60px'}}>
         Featured Products
       </Typography>
 
