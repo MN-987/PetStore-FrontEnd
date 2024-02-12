@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { useTheme } from '@mui/material/styles';
 import { Box, Paper, Grid } from '@mui/material';
 import { autoPlay } from 'react-swipeable-views-utils';
@@ -60,7 +60,7 @@ function CarosuelContainer() {
   };
 
   return (
-    <Grid style={{ display: 'flex', justifyContent: 'center', width: '100vw' }}>
+    <Grid  style={{ display: 'flex', justifyContent: 'center', width: '100vw' }}>
       <Box sx={{ maxWidth: '100%', flexGrow: 1 }}>
         <Paper
           square
