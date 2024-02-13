@@ -4,7 +4,6 @@
     object-fit: cover;
     transition: opacity 0.4s ease-in-out; /* Transition effect for opacity */
   }
-  
   .banner-image:hover {
     opacity: 0.7; /* Change the opacity on hover */
     object-fit: cover;

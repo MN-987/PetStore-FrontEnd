@@ -4,7 +4,7 @@ import CategorieCard from "./CategorieCard";
 const CategoriesContainer = () => {
   return (
     <Container>
-      {/* Title for the page */}
+     
       <Typography
         variant="h4"
         style={{ color: "#2c3454", marginBottom: "20px" , textAlign:'center',fontWeight:'400' , fontFamily:'cursive' , marginTop:'20px'}}
