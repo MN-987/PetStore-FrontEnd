@@ -1,6 +1,6 @@
 import  { useState, useEffect } from 'react';
 import { useTheme } from '@mui/material/styles';
-import { Box, Paper, Grid } from '@mui/material';
+import { Box, Paper, Grid, Container, Button } from '@mui/material';
 import { autoPlay } from 'react-swipeable-views-utils';
 import SwipeableViews from 'react-swipeable-views';
 import styled, { keyframes } from 'styled-components';
@@ -12,6 +12,7 @@ const images = [
     imgPath:
       'https://bzpets.myshopify.com/cdn/shop/files/slide1.jpg?v=1679390715&width=1920',
     text: 'Special Combo For Your Pets',
+
   },
   {
     imgPath:
@@ -31,6 +32,7 @@ const fadeInDown = keyframes`
   }
 `;
 
+
 const AnimatedText = styled.p`
   font-size: 50px;
   line-height: 80px;
@@ -42,7 +44,6 @@ const AnimatedText = styled.p`
   top: 4%;
   animation: ${fadeInDown} 1.5s ease-in-out 0s normal none 1 running;
 `;
-
 function CarosuelContainer() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
@@ -60,7 +61,10 @@ function CarosuelContainer() {
   };
 
   return (
+
     <Grid  style={{ display: 'flex', justifyContent: 'center', width: '100vw' }}>
+     
+     
       <Box sx={{ maxWidth: '100%', flexGrow: 1 }}>
         <Paper
           square
@@ -93,7 +97,18 @@ function CarosuelContainer() {
                 />
                 
               )}
-              {animateText && <AnimatedText>{step.text}</AnimatedText>}
+              {animateText && <AnimatedText>
+                <Container > {step.text}  
+                <Button variant="contained" sx={{
+                  bgcolor: '#ff4474',
+                  color: 'white',
+                  display:'block',
+                }}>Shop Now</Button>
+           
+
+                </Container>
+  
+              </AnimatedText>}
             </div>
             
           ))}

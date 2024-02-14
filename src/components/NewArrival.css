@@ -1,0 +1,11 @@
+.title-content {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 7px;
+    background: url(https://bzpets.myshopify.com/cdn/shop/t/6/assets/icon-home1.png) no-repeat;
+    background-position: 0 -130px;
+    position: absolute;
+    bottom: 2;
+    left: 42%;
+}
