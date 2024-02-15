@@ -1,6 +1,8 @@
 import ProductCard from "./ProductCard";
 import products from "../data/products";
-import { Container, Grid, Typography } from "@mui/material";
+import './NewArrival.css'
+
+import { Box, Container, Grid, Typography } from "@mui/material";
 const ProductsContainer = () => { 
     console.log(products); 
 return (
@@ -9,6 +11,7 @@ return (
       {/* Title for the page */}
       <Typography variant="h4"  style={{ color: "#2c3454", marginBottom: "20px" , textAlign:'center',fontWeight:'400' , fontFamily:'cursive' , marginTop:'60px'}}>
         Featured Products
+        <Box className="title-content"></Box>
       </Typography>
 
       <Grid container spacing={3} justifyContent="center">

@@ -1,6 +1,6 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import CategorieCard from "./CategorieCard";
-
+import './NewArrival.css'
 const CategoriesContainer = () => {
   return (
     <Container>
@@ -10,6 +10,9 @@ const CategoriesContainer = () => {
         style={{ color: "#2c3454", marginBottom: "20px" , textAlign:'center',fontWeight:'400' , fontFamily:'cursive' , marginTop:'20px'}}
       >
          Shop By Category
+         <Box className="title-content" sx={{marginLeft:'5px' , marginTop:'5px'}}>
+          
+          </Box>
       </Typography>
 
       <Grid container spacing={12} justifyContent="center">

@@ -52,7 +52,7 @@ export default function ProductCard({ title, description, price, firstImageUrl, 
          image={hovered ? secondImageUrl : firstImageUrl} 
         alt="Dog Photo"
       
-        style={{ cursor: 'pointer' ,height: 200, width: 200, margin: 'auto' }}
+        style={{ cursor: 'pointer' ,height: 200, width: 200, margin: 'auto'  }}
       />
        </Box>
       <CardContent>

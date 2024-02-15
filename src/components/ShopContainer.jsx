@@ -1,21 +1,17 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 
-import "./ShopContainer.css"; // Import CSS file for styles
+import "./ShopContainer.css"; 
 
 const ShopContainer = () => {
 
   return (
     <Grid container spacing={2} margin={0} justifyContent="center">
-      <Grid item xs={5}>
+      <Grid item xs={12} xl={6} md={6}>
         <Box style={{ position: "relative" }} className="container-image">
           <img
             src="https://bzpets.myshopify.com/cdn/shop/files/bn1.jpg?v=1679475652&width=800"
             alt="Banner 1"
-            style={{
-              width: "100%",
-              height: "400px",
-              objectFit: "cover"
-            }}
+            
             className="banner-image"
           />
           <Typography
@@ -52,12 +48,13 @@ const ShopContainer = () => {
           </Typography>
         </Box>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={12} xl={6} md={6} >
         <Box style={{ position: "relative" }} className="container-image" >
           <img
             src="https://bzpets.myshopify.com/cdn/shop/files/bn2.jpg?v=1679475652&width=800"
             alt="Banner 2"
             className="banner-image" 
+
           />
           <Typography
             variant="h4"
