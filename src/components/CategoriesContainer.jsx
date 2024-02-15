@@ -16,7 +16,7 @@ const CategoriesContainer = () => {
       </Typography>
 
       <Grid container spacing={12} justifyContent="center">
-        <Grid item xs={12} sm={6} md={4} lg={3}>
+        <Grid item xs={6} sm={6} md={4} lg={3}>
           <CategorieCard
             title="Dog Food"
             imageUrl="https://bzpets.myshopify.com/cdn/shop/files/cat-1.jpg?v=1672719548&width=400"
@@ -24,21 +24,21 @@ const CategoriesContainer = () => {
           />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={4} lg={3} >
+        <Grid item xs={6} sm={6} md={4} lg={3} >
           <CategorieCard
             title="Fish Food"
             imageUrl="https://bzpets.myshopify.com/cdn/shop/files/cat-2.jpg?v=1672719584&width=400"
             description="15 Items (s)"
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3} >
+        <Grid item xs={6} sm={6} md={4} lg={3} >
           <CategorieCard
             title="Hamster Food"
             imageUrl="https://bzpets.myshopify.com/cdn/shop/files/cat-3.jpg?v=1672719604&width=400"
             description="6 Items (s)"
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3} >
+        <Grid item xs={6} sm={6} md={4} lg={3} >
           <CategorieCard
             title="Pet's Toy"
             imageUrl="https://bzpets.myshopify.com/cdn/shop/files/cat-4.jpg?v=1672719622&width=400"
