@@ -3,7 +3,7 @@ import CategorieCard from "./CategorieCard";
 import './NewArrival.css'
 const CategoriesContainer = () => {
   return (
-    <Container>
+    <Container >
      
       <Typography
         variant="h4"

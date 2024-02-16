@@ -50,9 +50,9 @@ function CarosuelContainer() {
   const [animateText, setAnimateText] = useState(true);
 
   useEffect(() => {
-    setAnimateText(false); // Reset the animation
+    setAnimateText(false); 
     setTimeout(() => {
-      setAnimateText(true); // Trigger the animation
+      setAnimateText(true); 
     }, 10);
   }, [activeStep]);
 
@@ -61,8 +61,7 @@ function CarosuelContainer() {
   };
 
   return (
-
-    <Grid  style={{ display: 'flex', justifyContent: 'center', width: '100vw' }}>
+    <Grid container style={{ backgroundColor:"pink",display: 'flex', justifyContent: 'center'}}>
      
      
       <Box sx={{ maxWidth: '100%', flexGrow: 1 }}>
@@ -110,7 +109,6 @@ function CarosuelContainer() {
   
               </AnimatedText>}
             </div>
-            
           ))}
         </AutoPlaySwipeableViews>
       </Box>

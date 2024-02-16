@@ -7,9 +7,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import PetsIcon from "@mui/icons-material/Pets";
 import SearchIcon from "@mui/icons-material/Search";
@@ -17,27 +15,19 @@ import Person2Icon from "@mui/icons-material/Person2";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 const pages = ["Home", "Features", "Blog", "Products", "Pages"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
+ 
   return (
     <AppBar position="static" sx={{ backgroundColor: "#303454" }}>
       <Container maxWidth="xl">
@@ -147,62 +137,15 @@ function NavBar() {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="search">
-              <IconButton sx={{ p: 0, color: "inherit" }}>
-                <SearchIcon
-                  sx={{
-                    padding: 2,
-                    "&hover": {
-                      color: "#fc4d7d",
-                    },
-                  }}
-                />
+<Box sx={{display:"flex"}}>
 
-              </IconButton>
-            </Tooltip>
-                  <IconButton sx={{ p: 0, color: "inherit" }}>
-            <Person2Icon sx={{ padding: 2 }} />
-                  </IconButton>
-            <IconButton sx={{ p: 0, color: "inherit" }}>
-            <FavoriteBorderIcon sx={{ padding: 2 }} />
-            </IconButton>
+  <SearchIcon fontSize="large"  sx={{marginX:"20px" }}></SearchIcon>
+  <Person2Icon  fontSize="large"  sx={{marginX:"20px"}} ></Person2Icon>
+  <FavoriteBorderIcon   fontSize="large" sx={{marginX:"20px"}}></FavoriteBorderIcon>
+  <LocalMallOutlinedIcon   fontSize="large" sx={{marginX:"20px"}} ></LocalMallOutlinedIcon>
 
-            <IconButton sx={{ p: 0, color: "inherit" }}>
-              <LocalMallOutlinedIcon sx={{ padding: 2 }} />
-            </IconButton>
+</Box>
 
-            <Tooltip title="Open settings">
-              <IconButton
-                onClick={handleOpenUserMenu}
-                sx={{ p: 0, color: "inherit" }}
-              >
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
         </Toolbar>
       </Container>
     </AppBar>

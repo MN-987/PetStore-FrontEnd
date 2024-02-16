@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import NewArrivalCard from "./NewArrivalCard";
 import './NewArrival.css'
 const products = [
@@ -42,8 +42,7 @@ const products = [
 
 const NewArrivalContainer = () => {
   return (
-    
-    <container>
+    <Container>
      <Typography variant="h4"  style={{ color: "#2c3454", marginBottom: "20px" , textAlign:'center',fontWeight:'400' , fontFamily:'cursive' , marginTop:'60px' , position:"relative" , left:'10px'}} >
         New Arrivals
 
@@ -64,7 +63,7 @@ const NewArrivalContainer = () => {
         </Grid>
       ))}
     </Grid>
-    </container>
+    </Container>
   );
 };
 
