@@ -75,11 +75,12 @@ export default function ProductCard({ title, description, price, firstImageUrl, 
          <StarIcon></StarIcon>
         </Typography>
 
-  <Typography variant="h4" component="h4" color="error">
+  <Typography variant="h4" component="h4" color="error" sx={{position:'relative'}}>
         {price}$
-        <AddShoppingCartIcon sx={{
-            paddingLeft: '90%',
-            display:hovered ? 'block': 'none'
+        <AddShoppingCartIcon  sx={{
+            position: 'absolute',
+            right: "1%",
+            display: hovered ?'block' : 'none',
         }}></AddShoppingCartIcon>
 </Typography>
 
