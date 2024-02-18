@@ -27,7 +27,6 @@ function NavBar() {
     setAnchorElNav(null);
   };
 
- 
   return (
     <AppBar position="static" sx={{ backgroundColor: "#303454" }}>
       <Container maxWidth="xl">
@@ -137,15 +136,49 @@ function NavBar() {
             ))}
           </Box>
 
-<Box sx={{display:"flex"}}>
+          <Box sx={{ display: "flex" }}>
+            <IconButton
+              aria-label="search"
+              sx={{
+                color: "white",
+              }}
+            >
+              <SearchIcon
+                fontSize="large"
+                sx={{
+                  marginX: "20px",
+                  "&hover": {
+                    color: "red",
+                  },
+                }}
+              ></SearchIcon>
+            </IconButton>
+            <IconButton
+              aria-label="profile"
+              sx={{
+                color: "white",
+              }}
+            >
+              <Person2Icon
+                fontSize="large"
+                sx={{ marginX: "20px" }}
+              ></Person2Icon>
+            </IconButton>
 
-  <SearchIcon fontSize="large"  sx={{marginX:"20px" }}></SearchIcon>
-  <Person2Icon  fontSize="large"  sx={{marginX:"20px"}} ></Person2Icon>
-  <FavoriteBorderIcon   fontSize="large" sx={{marginX:"20px"}}></FavoriteBorderIcon>
-  <LocalMallOutlinedIcon   fontSize="large" sx={{marginX:"20px"}} ></LocalMallOutlinedIcon>
-
-</Box>
-
+            <IconButton aria-label="favorite" sx={{ color: "white" }}>
+              {" "}
+              <FavoriteBorderIcon
+                fontSize="large"
+                sx={{ marginX: "20px" }}
+              ></FavoriteBorderIcon>
+            </IconButton>
+            <IconButton aria-label="cart" sx={{ color: "white" }}>
+              <LocalMallOutlinedIcon
+                fontSize="large"
+                sx={{ marginX: "20px" }}
+              ></LocalMallOutlinedIcon>
+            </IconButton>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
